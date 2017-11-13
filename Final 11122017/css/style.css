@@ -1,0 +1,155 @@
+/* =================================
+  Base Element Styles
+==================================== */
+body {
+	color: #636363;
+	font-size: 1.2em;
+}
+
+a { 
+  text-decoration: none; /* remove underline from "a href" in header */
+  color: #003366;
+}
+
+footer {
+	padding-bottom: 70px; /* add some padding to the bottom to prevent window frame from hiding it */
+	text-align: center;
+}
+
+form {
+  width: 500px;
+  margin: 10px auto;
+  padding: 10px 20px;
+  background: #f4f7f8;
+  border-radius: 8px;
+}
+
+label {
+  display: block;
+  margin-top: 10px;
+  margin-bottom: 2px;  
+}
+
+
+
+/* =================================
+  Base Layout Styles - applies to everything
+==================================== */
+
+.main-image, .logo { /* let the main-image on index.html resize to browser */
+	width: auto;
+    height: auto;	
+	max-width: 75%;
+}
+
+img.main-image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto }
+
+.main-header-link:hover, .main-header-link:focus, .main-footer-link:hover, .main-footer-link:focus {
+	 background-color: #0099ff;
+}
+
+	p.main-text {
+	text-align: left;
+	}
+	
+
+.main-header {
+	margin-top: 0;
+}
+
+/* =================================
+  Media Queries - applies to specific size devices
+==================================== */
+@media (min-width: 0px), (max-width:768px){
+	div {
+		padding-top: 2px;
+		padding-bottom: 1px;
+	}
+	.logo {
+		padding-left: none;
+		padding-right: 8px;
+	}
+	
+	.main-header div {
+		text-align: center;
+	}
+}
+
+@media (min-width: 769px) {
+	.main-header {
+	position: fixed; /* fixed, no scrolling */
+	background-color: white;
+	width: 90%; /* fit to 90% ofwindow width */
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+	flex-flow: nowrap; /* do not wrap the header if the window gets smaller */
+	padding-top: .5em;
+	padding-left: 1em;
+	font-size: 1.5em;
+	}
+	
+	.main-header-link {
+	display: inline-block;
+	padding-left: 10px;
+	padding-right: 10px;
+	}
+	
+	.main-image {
+	padding-top: 6em;
+	}
+	
+	p.main-text {
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 75%;
+	}
+	
+	.div-contact-form {
+	padding-top: 7em;
+	}
+	
+	.main-footer {
+	width: 100%; /* fit to window width */
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	flex-flow: nowrap; /* do not wrap the header if the window gets smaller */
+	}
+		
+	.main-footer-link {
+	display: inline-block;
+	padding-left: 10px;
+	padding-right: 10px;
+	}
+	
+	
+	.copyright {
+	padding-top: 2em;
+	padding-bottom: 5em;
+	}
+	
+	.div-contact-form {
+	display: flex;
+	}
+ }
+
+@media (min-width:1200px) {
+	.main-header-link, .main-footer-link {
+	padding-left: 30px;
+	padding-right: 30px;
+	}	
+}
+
+/* ---- Float clearfix ---- */
+
+	.clearfix::after {
+		content: " ";
+		display: table;
+		clear: both;
+	}
+
+}
